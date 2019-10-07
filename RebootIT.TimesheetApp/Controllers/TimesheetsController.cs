@@ -50,8 +50,9 @@ namespace RebootIT.TimesheetApp.Controllers
         public IActionResult Create()
         {
             ViewData["ClientId"] = new SelectList(_context.Clients, "Id", "CompanyName");
-            ViewData["LocationId"] = new SelectList(_context.Locations, "Id", "Address");
+            ViewData["LocationId"] = new SelectList(_context.Locations, "Id", "Name");
             ViewData["StaffId"] = new SelectList(_context.Staff, "Id", "Email");
+            ViewData["TimeSheets"] = new SelectList(_context.Timesheets, "MinutesWorked");
             return View();
         }
 
