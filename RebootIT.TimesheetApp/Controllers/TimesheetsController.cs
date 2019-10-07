@@ -49,7 +49,7 @@ namespace RebootIT.TimesheetApp.Controllers
         // GET: Timesheets/Create
         public IActionResult Create()
         {
-            ViewData["ClientId"] = new SelectList(_context.Clients, "Id", "BillingAddress");
+            ViewData["ClientId"] = new SelectList(_context.Clients, "Id", "CompanyName");
             ViewData["LocationId"] = new SelectList(_context.Locations, "Id", "Address");
             ViewData["StaffId"] = new SelectList(_context.Staff, "Id", "Email");
             return View();
