@@ -9,6 +9,7 @@ namespace RebootIT.TimesheetApp.Data
     public class Timesheet
     {
         public int Id { get; set; }
+        [Required]
         public int MinutesWorked { get; set; }
         [Required]
         public Staff Staff { get; set; }
