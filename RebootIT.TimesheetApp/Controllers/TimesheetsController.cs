@@ -52,7 +52,6 @@ namespace RebootIT.TimesheetApp.Controllers
             ViewData["ClientId"] = new SelectList(_context.Clients, "Id", "CompanyName");
             ViewData["LocationId"] = new SelectList(_context.Locations, "Id", "Name");
             ViewData["StaffId"] = new SelectList(_context.Staff, "Id", "Surname");
-
             return View();
         }
 

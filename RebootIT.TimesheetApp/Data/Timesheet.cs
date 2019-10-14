@@ -9,16 +9,23 @@ namespace RebootIT.TimesheetApp.Data
     public class Timesheet
     {
         public int Id { get; set; }
+
         [Required]
         public int MinutesWorked { get; set; }
-        [Required]
+
         public Staff Staff { get; set; }
+
+        [Required]
         public int StaffId { get; set; }
-        [Required]
+
         public Client Client { get; set; }
-        public int ClientId { get; set; }
+
         [Required]
+        public int ClientId { get; set; }
+        
         public Location Location { get; set; }
+
+        [Required]
         public int LocationId { get; set; }
     }
 }
